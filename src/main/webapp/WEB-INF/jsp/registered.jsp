@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-	<h2>Success</h2>
-	<div>User <c:out value="${username}"/> has been registered</div>
+	<h2>${messages['success']}</h2>
+	<div>${messages['registered']}: <c:out value="${username}"/></div>
 </body>
 </html>

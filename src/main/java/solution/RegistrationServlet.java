@@ -25,6 +25,7 @@ public class RegistrationServlet extends HttpServlet
 		throws ServletException, IOException
 	{
 		String username = request.getParameter("username");
+		String password = request.getParameter("password");
 
 		request.setAttribute("username", username);
 		request.getRequestDispatcher("/WEB-INF/jsp/registered.jsp").forward(

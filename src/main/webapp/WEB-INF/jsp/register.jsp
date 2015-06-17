@@ -4,15 +4,15 @@
 <!DOCTYPE html>
 <html>
 <body>
-	<h2>Registration form</h2>
+	<h2>${messages['registration']}</h2>
 	<form action="/" method="post">
-		<label for="username">Name:</label>
+		<label for="username">${messages['name']}:</label>
 		<input id="username" name="username" value="<c:out value="${username}"/>"/>
 
-		<label for="password">Password:</label>
+		<label for="password">${messages['password']}:</label>
 		<input id="password" type="password" name="password" />
 		
-		<input type="submit" value="Submit">
+		<input type="submit" value="${messages['submit']}">
 	</form>
 </body>
 </html>
