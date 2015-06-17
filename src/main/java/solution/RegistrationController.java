@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping({ "/registration", "/" })
-public class Registration
+public class RegistrationController
 {
-	static final Logger logger = LoggerFactory.getLogger(Registration.class);
+	static final Logger logger = LoggerFactory.getLogger(RegistrationController.class);
 
 	@RequestMapping(method = GET)
 	public String show(Model model)
