@@ -14,5 +14,15 @@
 		<servlet-name>registration</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+	    <servlet-name>registered</servlet-name>
+	    <jsp-file>/WEB-INF/jsp/registered</jsp-file>
+	</servlet>
 	
+	<servlet-mapping>
+	    <servlet-name>registered</servlet-name>
+	    <url-pattern>/registered</url-pattern>
+	</servlet-mapping>
+		
 </web-app>

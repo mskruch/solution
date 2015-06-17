@@ -18,4 +18,16 @@ public class RegistrationServlet extends HttpServlet
 		request.getRequestDispatcher("/WEB-INF/jsp/register.jsp").forward(
 			request, response);
 	}
+
+	@Override
+	protected void doPost(
+		HttpServletRequest request, HttpServletResponse response)
+		throws ServletException, IOException
+	{
+		String username = request.getParameter("username");
+
+		request.setAttribute("username", username);
+		request.getRequestDispatcher("/WEB-INF/jsp/registered.jsp").forward(
+			request, response);
+	}
 }
