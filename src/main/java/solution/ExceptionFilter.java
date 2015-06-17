@@ -29,6 +29,11 @@ public class ExceptionFilter implements Filter
 		try {
 			chain.doFilter(request, response);
 		} catch (Exception e) {
+			/*
+			 * It's a good idea to give the user a reference to the issue so we
+			 * can quickly find the reason in the log files in case something
+			 * goes wrong
+			 */
 			Object errorId = generateErrorId(e);
 			logger.error("not handled exception: " + errorId, e);
 			request.setAttribute("errorId", errorId);

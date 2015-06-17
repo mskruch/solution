@@ -46,5 +46,4 @@ public class RegistrationForm
 	{
 		this.password = password;
 	}
-
 }

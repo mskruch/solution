@@ -12,7 +12,7 @@ public class User
 
 	User()
 	{
-		/* For Hibernate */
+		/* Required by Hibernate */
 	}
 
 	public User(String username, String password)
