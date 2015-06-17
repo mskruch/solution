@@ -5,10 +5,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-	<h2><s:message code="success"/></h2>
-	<div><s:message code="registered"/></div>
-	
-	<s:url value="/registration" var="url"></s:url>
-	<a href="${url}"><s:message code="registration"/> </a>
+	<h2><s:message code="error"/></h2>
+	<div><s:message code="error.message"/>: ${errorId}</div>
 </body>
 </html>

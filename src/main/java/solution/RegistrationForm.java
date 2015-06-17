@@ -4,6 +4,9 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import solution.model.User;
+import solution.validation.Unique;
+
 public class RegistrationForm
 {
 	static final String AT_LEAST_ONE_DIGIT = ".*\\d.*";
@@ -13,6 +16,7 @@ public class RegistrationForm
 	@NotNull
 	@Pattern(regexp = "^[\\pL\\pN]+$", message = "{validation.alphanumeric}")
 	@Size(min = 5, message = "{validation.minLength}")
+	@Unique(entity = User.class, attribute = "username", message = "{validation.uniqueUsername}")
 	private String username;
 
 	@NotNull
