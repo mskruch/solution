@@ -21,6 +21,7 @@ public class DecimalZipTest
 		assertEquals(-1, new DecimalZip().solution(10_000_000, 1));
 		assertEquals(-1, new DecimalZip().solution(90_000_000, 0));
 		assertEquals(-1, new DecimalZip().solution(100_000_000, 0));
+		assertEquals(1100, new DecimalZip().solution(10, 10));
 	}
 
 }

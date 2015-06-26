@@ -27,13 +27,10 @@ public class DecimalZip
 	private Stack<Integer> digits(int a)
 	{
 		Stack<Integer> digits = new Stack<Integer>();
-		if (a == 0) {
-			digits.push(0);
-		} else
-			while (a > 0) {
-				digits.push(a % 10);
-				a = a / 10;
-			}
+		digits.push(a % 10);
+		while ((a = a / 10) > 0) {
+			digits.push(a % 10);
+		}
 		return digits;
 	}
 }
