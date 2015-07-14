@@ -1,7 +1,13 @@
 package solution.model;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class User
@@ -9,6 +15,9 @@ public class User
 	@Id
 	private String username;
 	private String password;
+
+	@OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
+	public Collection<Pet> pets = new ArrayList<Pet>();
 
 	User()
 	{
@@ -37,4 +46,14 @@ public class User
 		return "User " + username;
 	}
 
+	public Collection<Pet> getPets()
+	{
+		return Collections.unmodifiableCollection(pets);
+	}
+
+	public void addPet(Pet pet)
+	{
+		this.pets.add(pet);
+		pet.setOwner(this);
+	}
 }
