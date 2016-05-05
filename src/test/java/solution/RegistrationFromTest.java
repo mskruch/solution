@@ -10,7 +10,7 @@ public class RegistrationFromTest
 	@Test
 	public void testAtLeastOneDigitRegExpForStringWithOneDigit()
 	{
-		String foo = "foo1bar";
+		String foo = "foobar";
 		boolean actual = foo.matches(RegistrationForm.AT_LEAST_ONE_DIGIT);
 		assertTrue(
 			"pattern for 'at least one digit' is not working for a string with one digit",
