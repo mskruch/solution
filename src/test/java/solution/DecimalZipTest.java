@@ -12,7 +12,6 @@ public class DecimalZipTest
 	@Test
 	public void test()
 	{
-		assertEquals(5162, new DecimalZip().solution(56, 12));
 		assertEquals(16273845, new DecimalZip().solution(12345, 678));
 		assertEquals(16273890, new DecimalZip().solution(123, 67890));
 		assertEquals(0, new DecimalZip().solution(0, 0));
